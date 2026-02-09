@@ -3,67 +3,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EarTraining.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakimi Piano Duo</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            -webkit-tap-highlight-color: transparent;
-            user-select: none;
-            touch-action: manipulation;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-        /* Custom scrollbar for the piano - optimized for iOS/Mobile touch */
-        .piano-scrollbar {
-            /* Force scrollbar visibility on some webkit browsers if possible */
-            -webkit-overflow-scrolling: touch;
-        }
-        .piano-scrollbar::-webkit-scrollbar {
-            height: 12px;
-        }
-        @media (min-width: 768px) {
-            .piano-scrollbar::-webkit-scrollbar {
-                height: 16px;
-            }
-        }
-        .piano-scrollbar::-webkit-scrollbar-track {
-            background: #e2e8f0;
-            border-radius: 10px;
-            margin: 0 20px;
-        }
-        .piano-scrollbar::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 10px;
-            border: 3px solid #e2e8f0;
-        }
-        .piano-scrollbar::-webkit-scrollbar-thumb:active {
-            background: #2563eb;
-        }
-        /* Prevent accidental scrolling while interacting with piano keys */
-        .piano-no-scroll {
-            touch-action: none;
-        }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .piano-key-white {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), inset 0 -4px 0px rgba(0,0,0,0.1);
+      }
+      .piano-key-black {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), inset 0 -2px 0px rgba(255,255,255,0.1);
+      }
     </style>
 
+<link rel="stylesheet" href="/index.css">
 <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "howler": "https://esm.sh/howler@^2.2.4"
   }
 }
 </script>
-  <script type="module" crossorigin src="./assets/index-ba71C9UE.js"></script>
+  <script type="module" crossorigin src="/assets/index-D5uL3rE1.js"></script>
 </head>
-<body class="bg-blue-50 text-slate-900 font-sans overflow-x-hidden">
+<body class="bg-slate-950 text-white overflow-x-hidden">
     <div id="root"></div>
-    <!-- Explicitly load the entry point -->
+    <!-- Load the React Application -->
 </body>
 </html>
